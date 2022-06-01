@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="external_layout_trial_balance_report">
+        <!--div class="header o_boxed_header"-->
+        <div class="header">
+            <div class="row mb8" style="border: 1px solid black;">
+                <div class="col-7">
+                   <h4><span t-field="res_company.name" /></h4>
+                </div>
+                <div class="col-5 text-right">
+                   <h4><span t-field="res_company.vat" /></h4>
+                </div>
+            </div>
+            <div class="row mb8">
+                <div class="col-12">
+                  <h5
+                        style="text-decoration: underline;"
+                        class="text-center"
+                    >Balance de Comprobación</h5>
+                  <h5 class="text-center">Desde:<span
+                            t-esc="data['date_from']"
+                        /> Hasta:<span t-esc="data['date_to']" /></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="article">
+          <t t-raw="0" />
+        </div>
+
+        <div class="footer">
+          <div class="row" style="border-top: 1px solid black;">
+            <div class="col-4">
+              Impreso: <span
+                        t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                    />
+            </div>
+            <div class="col-6 text-center">
+              Por: <span t-esc="user.name" />
+            </div>
+            <div class="col-2 text-right">
+              <ul class="list-inline">
+                <li class="list-inline-item"><span class="page" /></li>
+                <li class="list-inline-item">/</li>
+                <li class="list-inline-item"><span class="topage" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </template>
+</odoo>
