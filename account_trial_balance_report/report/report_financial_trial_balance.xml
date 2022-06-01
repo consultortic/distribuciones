@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="report_trial_balance">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="account_trial_balance_report.external_layout_trial_balance_report">
+        <div class="page">
+          <style>
+            .td-line {
+                padding: 1px;
+                font-size: 10px;
+            }
+
+            .th-line {
+                text-align: center;
+                vertical-align: middle;
+            }
+          </style>
+          <table class="table table-sm">
+            <thead style="border: 1px solid black;">
+              <tr>
+                <th style="width:15%;" class="td-line">Código de Cuenta</th>
+                <th style="width:33%;" class="td-line">Nombre de Cuenta</th>
+                <th style="width:13%;" class="text-right td-line">Saldo Anterior</th>
+                <th style="width:13%;" class="text-right td-line">Debe</th>
+                <th style="width:13%;" class="text-right td-line">Haber</th>
+                <th style="width:13%;" class="text-right td-line">Saldo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr t-foreach="get_account_lines" t-as="a">
+                <t t-if="a['level'] != 0">
+                  <t t-if="a.get('type') != 'view'"><t
+                                                t-set="style"
+                                                t-value="'font-weight: normal;'"
+                                            /></t>
+                  <t t-if="a.get('type') == 'view'"><t
+                                                t-set="style"
+                                                t-value="'font-weight: bold;'"
+                                            /></t>
+                  <td class="td-line">
+                    <span t-att-style="style" t-esc="a.get('code')" />
+                  </td>
+                  <td class="td-line">
+                    <span style="color: white;" t-esc="'.' * a.get('level', 0)" />
+                    <span t-att-style="style" t-esc="a.get('name')" />
+                  </td>
+                  <td class="text-right td-line">
+                    <span
+                                                t-att-style="style"
+                                                t-esc="a.get('initial_balance')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                            />
+                  </td>
+                  <td class="text-right td-line">
+                    <span
+                                                t-att-style="style"
+                                                t-esc="a.get('debit')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                            />
+                  </td>
+                  <td class="text-right td-line">
+                    <span
+                                                t-att-style="style"
+                                                t-esc="a.get('credit')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                            />
+                  </td>
+                  <td class="text-right td-line">
+                    <span
+                                                t-att-style="style"
+                                                t-esc="a.get('balance')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                            />
+                  </td>
+                </t>
+              </tr>
+            </tbody>
+          </table>
+          <table style="width:100%;">
+                <thead style="border: 1px solid black;">
+                  <tr>
+                    <td span="2" style="width:48%;" class="text-right td-line">
+                      Total General:
+                    </td>
+                    <td style="width:13%;" class="text-right td-line">
+                      <span
+                                            t-att-style="style"
+                                            t-esc="sum_initial_balance"
+                                            t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                        />
+                    </td>
+                    <td style="width:13%;" class="text-right td-line">
+                      <span
+                                            t-att-style="style"
+                                            t-esc="sum_debit"
+                                            t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                        />
+                    </td>
+                    <td style="width:13%;" class="text-right td-line">
+                      <span
+                                            t-att-style="style"
+                                            t-esc="sum_credit"
+                                            t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                        />
+                    </td>
+                    <td style="width:13%;" class="text-right td-line">
+                      <span
+                                            t-att-style="style"
+                                            t-esc="sum_balance"
+                                            t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                        />
+                    </td>
+                  </tr>
+                </thead>
+          </table>
+     </div>
+    </t>
+   </t>
+  </t>
+ </template>
+</odoo>

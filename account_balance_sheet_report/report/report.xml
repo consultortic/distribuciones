@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="action_report_financial_balance" model="ir.actions.report">
+            <field name="name">Balance report</field>
+            <field
+                name="model"
+            >report.account_balance_sheet_report.report_financial_balance</field>
+            <field name="report_type">qweb-pdf</field>
+            <field
+                name="report_name"
+            >account_balance_sheet_report.report_financial_balance</field>
+            <field
+                name="report_file"
+            >account_balance_sheet_report.report_financial_balance</field>
+            <field
+                name="binding_model_id"
+                ref="model_report_account_balance_sheet_report_report_financial_balance"
+            />
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="report_financial_balance">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="account_balance_sheet_report.external_layout_balance_report">
+        <div class="page">
+          <table class="table table-sm">
+            <thead style="border: 1px solid black;">
+              <tr>
+                <th>Código de Cuenta</th>
+                <th>Nombre de Cuenta</th>
+                <th class="text-right">Saldo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr t-foreach="get_account_lines" t-as="a">
+                <t t-if="a['level'] != 0">
+                  <t t-if="a.get('level') != 1"><t
+                                                t-set="style"
+                                                t-value="'font-weight: normal;'"
+                                            /></t>
+                  <t t-if="a.get('level') == 1"><t
+                                                t-set="style"
+                                                t-value="'font-weight: bold;'"
+                                            /></t>
+                  <td>
+                    <span t-att-style="style" t-esc="a.get('code')" />
+                  </td>
+                  <td>
+                    <span style="color: white;" t-esc="'.' * a.get('level', 0)" />
+                    <span t-att-style="style" t-esc="a.get('name')" />
+                  </td>
+                  <td class="text-right">
+                    <span
+                                                t-att-style="style"
+                                                t-esc="a.get('balance')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"
+                                            />
+                    <span style="color: white;" t-esc="'.....' * a.get('level', 0)" />
+                  </td>
+                </t>
+              </tr>
+            </tbody>
+          </table>
+      <table style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="height: 80px; width:30%;" />
+            <td style="height: 80px; width:5%;" />
+            <td style="height: 80px; width:30%;" />
+            <td style="height: 80px; width:5%;" />
+            <td style="height: 80px; width:30%;" />
+          </tr>
+          <tr>
+            <td class="text-center" style="color: black; border-top: 1px solid;">
+              Gerente
+            </td>
+            <td />
+            <td class="text-center" style="color: black; border-top: 1px solid;">
+              Contador
+            </td>
+            <td />
+            <td class="text-center" style="color: black; border-top: 1px solid;">
+              Revisor Fiscal
+            </td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+    </t>
+   </t>
+  </t>
+ </template>
+</odoo>
