@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Add documents in res.partner -->
+        <record id="res_partner_documents_form_view" model="ir.ui.view">
+            <field name="name">res.partner.documents.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <!-- Add document to notebook -->
+                <xpath expr="//notebook" position="inside">
+                    <page name="documents" string="Documents">
+                        <group>
+                            <field name="mandatory" />
+                        </group>
+                        <group>
+                            <field name="reviewed" readonly="1" />
+                        </group>
+                        <field name="document_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="doc_type" />
+                                <field name="document" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Make reviewed field writable for sales_team.group_sale_manager -->
+        <record id="res_partner_documents_reviewed_writable" model="ir.ui.view">
+            <field name="name">res.partner.documents.reviewed.writable</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="res_partner_documents_form_view" />
+            <field
+                name="groups_id"
+                eval="[(6, 0, [ref('chart_of_accounts_group.group_account_coa_user') ])]"
+            />
+            <field name="arch" type="xml">
+                <field name='reviewed' position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
