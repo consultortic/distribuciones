@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_batch_rfq_wizard,access.batch.rfq.wizard,model_purchase_order_batch_rfq,purchase.group_purchase_user,1,1,1,1
+access_batch_rfq_lines_wizard,access.batch.rfq.lines.wizard,model_purchase_order_batch_rfq_lines,purchase.group_purchase_user,1,1,1,1

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+account.access_account_account_manager,account.account,account.model_account_account,account.group_account_manager,1,0,0,0
+access_account_account_manager_coa,account.account.coa,account.model_account_account,group_account_coa_user,1,1,1,1
+account.access_account_account_type_manager,account.account.type,account.model_account_account_type,account.group_account_manager,1,0,0,0
+access_account_account_type_manager_coa,account.account.type.coa,account.model_account_account_type,group_account_coa_user,1,1,1,1
