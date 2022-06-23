@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_connector_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 21:42+0000\n"
+"PO-Revision-Date: 2020-09-22 21:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model,name:whatsapp_connector_sale.model_acrux_chat_conversation
+msgid "Chat Conversation"
+msgstr "Conversación Chat"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_sale_order__conversation_id
+msgid "ChatRoom"
+msgstr ""
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/AccountInvoice.py:0
+#, python-format
+msgid "Configure Reports."
+msgstr "Configurar Reportes."
+
+#. module: whatsapp_connector_sale
+#: model:ir.model,name:whatsapp_connector_sale.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+msgid "Disc. %"
+msgstr "Desc. %"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_account_move__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_acrux_chat_conversation__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_res_partner__display_name
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.view_order_form
+msgid "Email"
+msgstr "Correo"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_search
+msgid "From ChatRoom"
+msgstr "Desde ChatRoom"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+msgid "General"
+msgstr ""
+
+#. module: whatsapp_connector_sale
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_account_move__id
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_acrux_chat_conversation__id
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_res_partner__id
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_sale_order__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model,name:whatsapp_connector_sale.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#, python-format
+msgid "Last %s months sales"
+msgstr "Venta de los últimos %s meses"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_search
+msgid "Last 6 Months"
+msgstr "Últimos 6 Meses"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_account_move____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_acrux_chat_conversation____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_res_partner____last_update
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: whatsapp_connector_sale
+#. openerp-web
+#: code:addons/whatsapp_connector_sale/static/src/xml/acrux_chat_template.xml:0
+#, python-format
+msgid "Order"
+msgstr "Pedido"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/SaleOrder.py:0
+#, python-format
+msgid "Order - %s"
+msgstr "Pedido - %s"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+#, python-format
+msgid "Price"
+msgstr "Precio"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+#, python-format
+msgid "Qty"
+msgstr "Cant."
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/SaleOrder.py:0
+#, python-format
+msgid "Quotation - %s"
+msgstr "Presupuesto - %s"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model.fields,field_description:whatsapp_connector_sale.field_acrux_chat_conversation__sale_order_id
+msgid "Sale Order"
+msgstr "Pedido de Venta"
+
+#. module: whatsapp_connector_sale
+#: model:ir.model,name:whatsapp_connector_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Venta"
+
+#. module: whatsapp_connector_sale
+#: model:ir.actions.act_window,name:whatsapp_connector_sale.act_sales_by_user_graph
+msgid "Sales by Agent"
+msgstr "Ventas por Agente"
+
+#. module: whatsapp_connector_sale
+#: model:ir.actions.act_window,name:whatsapp_connector_sale.act_sales_by_month_graph
+#: model:ir.ui.menu,name:whatsapp_connector_sale.menu_chatroom_report_sales_by_month_graph
+msgid "Sales by Month"
+msgstr "Ventas por Mes"
+
+#. module: whatsapp_connector_sale
+#: model:ir.ui.menu,name:whatsapp_connector_sale.menu_chatroom_report_sales_by_user_graph
+msgid "Sales by User"
+msgstr "Ventas por Usuario"
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+msgid "Tax"
+msgstr "Imp."
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_search
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: whatsapp_connector_sale
+#. openerp-web
+#: code:addons/whatsapp_connector_sale/static/src/js/acrux_chat.js:0
+#, python-format
+msgid "This conversation does not have a partner."
+msgstr "Esta conversación no tiene un clienta asociado."
+
+#. module: whatsapp_connector_sale
+#: model_terms:ir.ui.view,arch_db:whatsapp_connector_sale.acrux_whatsapp_sale_order_form_view
+msgid "UoM"
+msgstr "UdM"
+
+#. module: whatsapp_connector_sale
+#: code:addons/whatsapp_connector_sale/models/ResPartner.py:0
+#, python-format
+msgid "Uom"
+msgstr "Udm"

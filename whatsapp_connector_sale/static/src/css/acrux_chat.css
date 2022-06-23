@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.o_acrux_chat .o_graph_barchart {
+    margin-bottom: 1em;
+}
+
+.o_acrux_chat .o_graph_barchart > svg {
+    overflow: initial;
+}

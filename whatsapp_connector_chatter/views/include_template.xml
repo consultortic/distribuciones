@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="acrux chatter assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/whatsapp_connector_chatter/static/src/js/app.js" />
+
+            <link rel="stylesheet" href="/whatsapp_connector_chatter/static/src/css/chatter.css" type="text/css"/>
+        </xpath>
+    </template>
+</odoo>
