@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="document_type_tree_view" model="ir.ui.view">
+            <field name="name">document.type.tree.view</field>
+            <field name="model">document.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="mandatory" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="document_type_form_view" model="ir.ui.view">
+            <field name="name">document.type.form.view</field>
+            <field name="model">document.type</field>
+            <field name="arch" type="xml">
+                <form string="Document Type">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="mandatory" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Document type action -->
+        <record id="action_doc_type" model="ir.actions.act_window">
+            <field name="name">Document Type</field>
+            <field name="res_model">document.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                Create a new document type
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="menu_config_document_type"
+            name="Document Type"
+            parent="contacts.res_partner_menu_config"
+            sequence="15"
+        />
+
+        <menuitem
+            id="menu_action_document_type"
+            action="action_doc_type"
+            parent="menu_config_document_type"
+            sequence="1"
+        />
+    </data>
+</odoo>
